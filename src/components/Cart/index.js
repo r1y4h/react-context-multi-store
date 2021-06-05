@@ -4,7 +4,7 @@ import { useCartStore } from "stores";
 
 export default () => {
   const inputRef = React.useRef();
-  const { cart, addToCart, removeCartItem, setTest } = useCartStore();
+  const { cart, addToCart, removeCartItem } = useCartStore();
 
   const handleAddToCart = () => {
     const item = inputRef.current.value;
