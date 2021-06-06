@@ -4,7 +4,7 @@ import { useStores } from "stores";
 
 export default () => {
   const inputRef = React.useRef();
-  const { cartStore } = useStores()
+  const { cartStore, userStore } = useStores()
   const { cart, addToCart, removeCartItem } = cartStore;
 
   const handleAddToCart = () => {
@@ -27,6 +27,7 @@ export default () => {
         <button className="mb-2" onClick={handleAddToCart}>
           Add To Cart
         </button>
+        <div>User state shared across components: {userStore.user.name}</div>
         <table className="table">
           <thead>
             <tr>

@@ -16,7 +16,7 @@ export default () => {
   return (
     <div>
       <h2>{user.name}</h2>
-      <input className="form-control" onChange={handleUpdateUser} />
+      <input className="form-control" placeholder="Type to change user name" onChange={handleUpdateUser} />
     </div>
   );
 };
