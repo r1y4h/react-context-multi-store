@@ -1,13 +1,14 @@
 import React from "react";
 
-import { useCartStore } from "stores";
+import { useStores } from "stores";
 
 export default () => {
   const inputRef = React.useRef();
-  const { cart, addToCart, removeCartItem } = useCartStore();
+  const { cartStore } = useStores()
+  const { cart, addToCart, removeCartItem } = cartStore;
 
   const handleAddToCart = () => {
-    const item = inputRef.current.value;
+    const item = inputRef.current.value || 'Some Item';
     addToCart({
       name: item,
       qty: Math.floor(Math.random() * 10),

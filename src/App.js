@@ -4,7 +4,7 @@ import Cart from 'components/Cart'
 import Users from 'components/Users'
 
 export default () => {
-  console.log('abc')
+  console.log('rendered once')
 
   return (
     <div className="container">

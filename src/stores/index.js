@@ -1,7 +1,7 @@
 import React from "react";
 
-import { CartContextProvider, useCartStore } from "stores/cart";
-import { UserContextProvider, useUserStore } from "stores/user";
+import { CartContext, CartContextProvider } from "stores/cart";
+import { UserContext, UserContextProvider } from "stores/user";
 
 const StoreProvider = ({ children }) => {
   return (
@@ -11,4 +11,9 @@ const StoreProvider = ({ children }) => {
   );
 };
 
-export { StoreProvider, useCartStore, useUserStore };
+const useStores = () => ({
+  cartStore: React.useContext(CartContext),
+  userStore: React.useContext(UserContext),
+})
+
+export { StoreProvider, useStores };

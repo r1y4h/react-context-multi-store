@@ -1,9 +1,10 @@
 import React from "react";
 
-import { useUserStore } from "stores";
+import { useStores } from "stores";
 
 export default () => {
-  const { user, updateUser } = useUserStore();
+  const { userStore } = useStores()
+  const { user, updateUser } = userStore;
 
   const handleUpdateUser = (event) => {
     updateUser({

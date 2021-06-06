@@ -23,9 +23,7 @@ const UserContextProvider = ({ children }) => {
   );
 };
 
-const useUserStore = () => React.useContext(UserContext)
-
 export {
+  UserContext,
   UserContextProvider,
-  useUserStore,  
 }
